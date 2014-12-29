@@ -1,0 +1,39 @@
+# s = set servos
+# <leg1 hip>, <leg2 hip>, <leg3 hip>, leg4 hip, leg1 knee, leg2 knee, leg3 knee, leg4 knee
+# 90 = neutral servo positions
+
+delay = 50
+
+forward
+#neutral position
+s,130,50,130,50,90,90,90,90
+
+#pick up front left leg
+s,50,130,50,130,180,90,90,90
+#move front left leg forward
+s,90,130,50,130,180,90,90,90
+#drop front left leg
+s,90,130,50,130,90,90,90,90
+
+#pick up front right leg>>> ser = serial.Serial('/dev/ttyS1', 19200, timeout=1)
+s,90,130,50,130,90,180,90,90
+#move front right leg forward
+s,90,90,50,130,90,180,90,90
+#drop front right leg
+s,90,90,50,130,90,90,90,90
+
+#pick up rear right leg
+s,90,90,50,130,90,90,180,90
+#move rear right leg forward
+s,90,90,10,130,90,90,180,90
+#drop rear right leg
+s,90,90,10,130,90,90,90,90
+
+#pick up rear left leg
+s,90,90,10,130,90,90,90,180
+#move rear left leg forward
+s,90,90,10,170,90,90,90,180
+#drop rear left leg
+s,90,90,10,170,90,90,90,90
+
+#When bot goes back to neutral position it will move forward
